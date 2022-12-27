@@ -7,3 +7,10 @@
 - [] Add note summary titles
 - [] Move modified notes to the top of the list
 - [] Delete notes
+
+Built with
+- HTML
+- CSS
+- JavaScript
+- ReactJS
+- Vite
