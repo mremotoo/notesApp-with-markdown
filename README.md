@@ -4,7 +4,7 @@
 <br/>
 
 - [✅] Sync notes with local storage
-- [🔃] Add note summary titles
+- [✅] Add note summary titles
 - [🔃] Move modified notes to the top of the list
 - [🔃] Delete notes
 
@@ -14,3 +14,5 @@ Built with
 - JavaScript
 - ReactJS
 - Vite
+
+[Click to try me live](https://www.example.com)
