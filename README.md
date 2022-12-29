@@ -15,4 +15,4 @@ Built with
 - ReactJS
 - Vite
 
-[Click to try me live](https://www.example.com)
+[Click to try me live](https://remonote.netlify.app/)
