@@ -5,7 +5,7 @@
 
 - ✅ Sync notes with local storage
 - ✅ Add note summary titles
-- 🔃 Move modified notes to the top of the list
+- ✅ Move modified notes to the top of the list
 - 🔃 Delete notes
 
 Built with
