@@ -18,7 +18,7 @@ export default function App() {
       localStorage.setItem("notes", JSON.stringify(notes))
     //   console.log(JSON.stringify((notes[0].body.split('\n'))))
     }, [notes])
-    
+
     
     function createNewNote() {
         const newNote = {
@@ -30,11 +30,30 @@ export default function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
+        // Try to reorder notes here 👇
+        setNotes(prevNotes => {
+            // create new array
+            // loop through prevNotes
+                // if prevNote.id === currentNoteId
+                    // put the new note to the top of the list
+                //else push the prevNotes
+            //return the array
+            const newArray = []
+            for (let i = 0; i < prevNotes.length; i++) {
+                const prevNote = prevNotes[i];
+                if (prevNote.id === currentNoteId) {
+                    newArray.unshift({ ...prevNote, body: text})
+                }else{newArray.push(prevNote)}
+            }
+            return newArray
+        })     
+        
+        // This does not rearrange notes on top
+        // setNotes(oldNotes => oldNotes.map(oldNote => {
+        //     return oldNote.id === currentNoteId
+        //         ? { ...oldNote, body: text }
+        //         : oldNote
+        // }))
     }
     
     function findCurrentNote() {
