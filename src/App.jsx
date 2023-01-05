@@ -5,6 +5,7 @@ import { data } from "./data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
 import { stringify } from "postcss"
+import { func } from "prop-types"
 
 export default function App() {
     
@@ -61,6 +62,16 @@ export default function App() {
             return note.id === currentNoteId
         }) || notes[0]
     }
+
+    // Try to implement delete note hete 👇
+    function deleteNote(event, noteId) {
+        event.stopPropagation()
+        console.log("delete")
+        setNotes(oldNote => 
+                oldNote.filter(note => note.id !== noteId)
+        // setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
+        )
+    }
     
     return (
         <main>
@@ -77,6 +88,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
